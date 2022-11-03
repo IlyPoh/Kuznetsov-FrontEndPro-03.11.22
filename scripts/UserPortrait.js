@@ -22,14 +22,14 @@ const userAgeCalc = () => {
     }
 };
 
-// List of capitals of countries
+// List of country capitals
 const capitalsOfContries = {
     Київ: "України",
     Вашингтон: "США",
     Лондон: "Великобританії"
 };
 
-// List of champions in sports
+// List of sports champions
 const championsOfSports = {
     Футбол : "Реал Мадрид", 
     Баскетбол: "Милуоки Бакс", 
