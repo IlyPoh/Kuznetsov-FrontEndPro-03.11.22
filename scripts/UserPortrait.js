@@ -1,24 +1,24 @@
 // Asking user personal info: date of birth, city, favorite sport
 // And checking if user entering something
 const userDateOfBirth = Number(prompt("Добрий день, введіть будь ласка свій рік народження (Наприклад: 1990, 2000, 2010)"));
-if (userDateOfBirth === 0) {
+if (!userDateOfBirth) {
     alert("Шкода, що Ви не захотіли ввести свій рік народження")
 }
 const userCity = prompt('Введіть місто в якому ви живете (Наприклад: Київ, Вашингтон, Лондон)');
-if (userCity === null || userCity === "") {
+if (!userCity) {
     alert("Шкода, що Ви не захотіли ввести своє місто проживання")
 }
 const userSport = prompt('Введіть ваш улюбленний вид спорту (Наприклад: Футбол, Баскетбол, Теніс)');
-if (userSport === null || userSport === "") {
+if (!userSport) {
     alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту")
 }
 
 // Calculating user age
 const userAgeCalc = () => {
-    if (userDateOfBirth === 0 || userDateOfBirth === undefined) {
+    if (!userDateOfBirth) {
         return "Немає інформації";
     } else {
-        return 2022 - userDateOfBirth;
+        return new Date().getFullYear() - userDateOfBirth;
     }
 };
 
@@ -49,7 +49,7 @@ const arraySport = Object.keys(championsOfSports);
 
 // Checking if user city is a capital
 const userCityCheck = () => {
-    if (userCity === null || userCity === "" || userCity === undefined) {
+    if (!userCity) {
         return "Немає інформації";
     } else if(arrayCapital.includes(userInfo.City)) {
         const country = capitalsOfContries[userInfo.City];
@@ -62,7 +62,7 @@ const userCityCheck = () => {
 
 // Checking if user sport has a champion from list
 const userSportCheck = () => {
-    if (userSport === null || userSport === "" || userSport === undefined) {
+    if (!userSport) {
         return "Немає інформації";
     } else if (arraySport.includes(userInfo.Sport)) {
         if (userInfo.Sport == arraySport[0] || userInfo.Sport == arraySport[1]) {
