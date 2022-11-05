@@ -23,17 +23,27 @@ const userAgeCalc = () => {
 };
 
 // List of country capitals
+
+const kyiv = "Київ";
+const washington = "Вашингтон";
+const london = "Лондон";
+
 const capitalsOfContries = {
-    Київ: "України",
-    Вашингтон: "США",
-    Лондон: "Великобританії"
+    [kyiv]: "України",
+    [washington]: "США",
+    [london]: "Великобританії"
 };
 
 // List of sports champions
+
+const football = "Футбол";
+const basketball = "Баскетбол";
+const tennis = "Теніс";
+
 const championsOfSports = {
-    Футбол : "Реал Мадрид", 
-    Баскетбол: "Милуоки Бакс", 
-    Теніс: "Виктор Аксельсен"
+    [football] : "Реал Мадрид", 
+    [basketball]: "Милуоки Бакс", 
+    [tennis]: "Виктор Аксельсен"
 };
 
 // User info list
